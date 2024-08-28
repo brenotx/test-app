@@ -1,22 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from "rac-button-test/dist/main.js";
+import { DialogTrigger, Popover } from "react-aria-components";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <DialogTrigger>
+          <Button>Open Popover</Button>
+          <Popover style={{ background: "grey", padding: 8 }}>
+            <h2>Popover</h2>
+            <p>Popover content</p>
+          </Popover>
+        </DialogTrigger>
       </header>
     </div>
   );
